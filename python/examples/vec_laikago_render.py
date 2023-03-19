@@ -1,5 +1,5 @@
 import pytinydiffsim as tds
-num_actors = 512
+num_actors = 100
 auto_reset_when_done = True
 tds_robot = tds.VectorizedLaikagoEnv(num_actors, auto_reset_when_done)
 tds_robot.reset()
