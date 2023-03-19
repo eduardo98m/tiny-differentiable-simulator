@@ -1,5 +1,34 @@
 # Tiny Differentiable Simulator
 
+ The purpose of this fork is to create a similar library to raisimGymTorch, but with the following differences:
+
+- The library is header-only, so it can be used in other header-only libraries.
+- The library is free to use, and does not require a license. (Like raisim)
+- Is relatively lightweight. (I'm looking at you NVIDIA Omniverse)
+
+
+## Ussage
+
+* The library intended purpose is to be used as a python library: You make your RL environment in c++, and then use pybind11 to bind it to python.
+
+```bash
+python setup.py build_ext -f
+python setup.py develop
+```
+
+
+
+
+
+
+
+
+
+
+
+
+# Original README.md
+
 Tiny Differentiable Simulator is a header-only C++ (and CUDA) physics library with zero dependencies.
 
 + Note that the main repository is transfered from google-research to [Erwin Coumans](https://github.com/erwincoumans/tiny-differentiable-simulator)
