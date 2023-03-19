@@ -227,14 +227,21 @@ pytinydiffsim_ext = Extension(
 
 extensions.append(pytinydiffsim_ext)
 
-pytinydiffsim_dual_ext = Extension(
-    "pytinydiffsim_dual",
-    sources=sources+["python/pytinydiffsim_dual.cc"],
+
+
+#-------------------------------------------------------------------------------------------------#
+
+pytinyenvs_ext = Extension(
+    "pytinyenvs",
+    sources=sources+["custom_pkgs/pytinyenvs.cc"],
     libraries=libraries,
     extra_compile_args=CXX_FLAGS.split(),
     include_dirs=include_dirs + ["."])
 
-extensions.append(pytinydiffsim_dual_ext)
+extensions.append(pytinyenvs_ext)
+
+#-------------------------------------------------------------------------------------------------#
+
 
 if os.path.exists("third_party/CppAD/include"):
     platform_include_dirs = []
@@ -270,6 +277,7 @@ pytinyopengl3_ext = Extension(
     ])
 extensions.append(pytinyopengl3_ext)
 
+print([x for x in find_packages('python')])
 
 setup(
     name='pytinydiffsim',
