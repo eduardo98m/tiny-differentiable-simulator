@@ -4,3 +4,8 @@ compile_commands.json
 Dockerfile
 .history
 .vscode
+third_party/
+python/pytinydiffsim.egg-info/
+python/pytinydiffsim.cp*
+python/pytinyopengl3.cp*
+python/pytinydiffsim_dual.cp*
